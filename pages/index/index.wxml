@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class="country-box">
+      <scroll-view class="country-list" scroll-y='true' scroll-top='{{ scrollTop }}' bindscroll="scroll">
+          <view class='country-item' wx:for="{{countryJson}}" wx:key>
+            <view class='enT {{item.letter}}'>{{item.letter}}</view>
+            <view class='countryDetail-list' wx:for="{{item.data}}" wx:key>
+              <view class='countryDetail-item'>{{item}}</view>
+            </view>
+          </view>
+      </scroll-view>
+      <view class="char-box">
+          <view class="char-list">
+            <view class='char-item {{activeIndex==index?" active":""}}' data-index="{{index}}" wx:for="{{chars}}" catch:touchstart="onTouchStart" catch:touchend="onTouchEnd" catch:touchmove="onTouchMove" wx:key>{{item}}</view>
+          </view>
+      </view>
+      <view class="char-tip" wx:if="{{isTouching}}">{{currentChar}}</view>
+  </view>
+</view>

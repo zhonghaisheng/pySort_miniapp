@@ -1,0 +1,104 @@
+/**index.wxss**/
+page{
+  height: 100%;
+}
+.container{
+    height: 100%;
+    -webkit-overflow-scrolling: touch;/*设置滑动流畅*/
+    padding:0;
+}
+
+.container{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+}
+
+.country-box {
+    -ms-flex: 1;
+    flex: 1;
+    overflow: auto;
+    position: relative;
+    width:100%;
+}
+
+.country-list{
+  height: 100%;
+  overflow: auto;
+}
+
+.enT {
+    background: #999;
+    color: #fff;
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    text-indent: 20px;
+}
+
+.countryDetail-list .countryDetail-item {
+    text-indent: 20px;
+    padding: 10px 0;
+}
+
+.char-box {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    z-index:9999;
+}
+
+.char-list {
+    background: #fff;
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.char-item {
+    -ms-flex: 1;
+    flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.char-item.active {
+    background: rgba(230, 138, 24, 0.56);
+    color: #fff;
+}
+
+.char-tip {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: gray;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 50px;
+    text-align: center;
+}
